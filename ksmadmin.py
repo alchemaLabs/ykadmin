@@ -62,8 +62,8 @@ def delete():
 def activate():
 	aord = raw_input("[A]ctivate or [D]eactivate key?")
 	if aord == '':
-	error("Please choose activate or deactivate")
-	activate()
+		error("Please choose activate or deactivate")
+		activate()
 	ak_ser = raw_input("Serial number of key: ")
 	if ak_ser == '':
 		error("Please enter serial number of key to modify")
@@ -74,7 +74,7 @@ def activate():
 		main()
 	if aord == 'D':
 		db.query("UPDATE yubikeys SET ACTIVE = 0 WHERE serialnr='"+ak_ser+"'")
-	main()
+		main()
 
 def getkeys():
 	db.query("""SELECT * FROM yubikeys""")
@@ -117,3 +117,4 @@ def main():
 
 if __name__ == "__main__":
 	main()
+#end of file
