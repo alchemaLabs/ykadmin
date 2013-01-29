@@ -22,10 +22,12 @@ You need python (2.6)
 
 Run `python ksmadmin.py` and answer the questions.
 
-Prerueqisites
+Prerequisites
 ---
 
 [Python 2.6](http://www.python.org/download/releases/2.6/)
+
+[PyMySQLdb](http://mysql-python.sourceforge.net/MySQLdb.html)
 
 [Yubico Validation Server](https://github.com/Yubico/yubikey-val)
 
