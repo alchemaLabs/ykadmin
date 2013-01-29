@@ -18,14 +18,13 @@ Usage
 
 Download the file. 
 
-You need python (2.6)
-
 Run `python ksmadmin.py` and answer the questions.
 
 Prerequisites
 ---
 
-[Python 2.6](http://www.python.org/download/releases/2.6/)
+[Python 2.6](http://www.python.org/download/releases/2.6/)   
+<> 2.6 may work; didn't test. >= 3.0 may work if you change `raw_input` to `input`
 
 [PyMySQLdb](http://mysql-python.sourceforge.net/MySQLdb.html)
 
