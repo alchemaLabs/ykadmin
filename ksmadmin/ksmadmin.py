@@ -2,9 +2,7 @@ import _mysql #http://mysql-python.sourceforge.net/MySQLdb.html
 import string
 import sys
 import datetime
-
-now = datetime.datetime.now()
-fmtime = now.strftime('%Y-%m-%d')
+import getpass
 
 def keyaction(next):
 	next = string.upper(next)
@@ -44,6 +42,8 @@ def new():
 	if nk_lock == '':
 		nk_lock = '000000000000'
 
+	now = datetime.datetime.now()
+	fmtime = now.strftime('%Y-%m-%d')
 	nk_hw = 1
 	nk_created = fmtime
 
@@ -97,7 +97,7 @@ def error(msg):
 def definedb():
 	db_host=raw_input("DB host:")
 	db_username=raw_input("DB Username:")
-	db_pw = raw_input("DB Password:")
+	db_pw = getpass.getpass("DB Password:")
 	db_database = raw_input("Database:")
 	global db
 	db = _mysql.connect(db_host,db_username,db_pw,db_database)
