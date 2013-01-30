@@ -45,7 +45,7 @@ def delete():
 	dk_id = raw_input("ID of client to delete:")
 	if dk_id == '':
 		error("ID required to delete item from clients table")
-	delete()
+		delete()
 	db.query("DELETE FROM clients WHERE id='"+dk_id+"'")
 	main()
 

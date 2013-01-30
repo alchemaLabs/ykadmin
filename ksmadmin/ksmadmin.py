@@ -54,7 +54,7 @@ def delete():
 	dk_ser = raw_input("Serial number of key to delete:")
 	if dk_ser == '':
 		error("Serial number required to delete key")
-	delete()
+		delete()
 	db.query("DELETE FROM yubikeys WHERE serialnr='"+dk_ser+"'")
 	main()
 
